@@ -1,14 +1,10 @@
 
 function sometimes(func){
-  count = 0;
-  return function (){
-    while (count < 3 || (count >= 3 && (count % 2 === 0))){
-      count++
+  i = 0 
+  return function(){
+    while (i++ < 3 || (i > 4 && i % 2 !== 0)){
       return func.apply(this, arguments)
-    } 
-     while (count >= 3 && (count % 2 !== 0)){
-      count++
-      return "I do not know!";
-    } 
+    }
+    return "I do not know!"
   }
 }
