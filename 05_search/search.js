@@ -3,7 +3,7 @@ function search(func){
   this.forEach(function(element){
     if (func(element)){
       bool = true;
-    } else if (Array.isArray(element) && !bool){
+    } else if (Array.isArray(element) console.dir();){
       bool = search.call(element, func)
     }
   });
